@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+    <title>Reserva Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.8) 50%), url('static/back.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 200px auto; /* This will center the container horizontally */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+        h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #ff7200; /* Change heading color if needed */
+            text-align: center;
+        }
+        .user-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .user-info span {
+            font-weight: bold;
+            margin-right: 10px;
+            text-align: left;
+            min-width: 150px;
+            display: inline-block;
+        }
+        .user-info p {
+            margin: 0;
+            color: #ccc; /* Slightly lighter color for text */
+            text-align: left;
+        }
+        .success-tag {
+            text-align: center;
+            font-weight: bold;
+            color: #ff7200;
+            margin-top: 20px;
+        }
+
+        .main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(back.jpeg) ;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 50px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #eda86f;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 1000px;
+    float: right;
+    height: 70px;
+}
+
+ul{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Reserva Eventos</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">NOSOTROS</a></li>
+                    <li><a href="{{ url_for('events') }}">EVENTOS</a></li>
+                    <li><a href="{{ url_for('contact') }}">CONTACTO</a></li>
+                    <li><a href="{{ url_for('adm') }}">ADMIN</a></li>
+                </ul>
+            </div>
+
+           
+        </div> 
+    <div class="container">
+        <h2>Confirmación Reserva</h2>
+
+        <div class="user-info">
+            <span>Usuario:</span>
+            <p>{{ Name }}</p>
+        </div>
+       
+        <div class="user-info">
+            <span>Email:</span>
+            <p>{{ Email }}</p>
+        </div>
+        <div class="user-info">
+            <span>Nombre:</span>
+            <p>{{ name }}</p>
+        </div>
+        <div class="user-info">
+            <span>Tipo:</span>
+            <p>{{ type }}</p>
+        </div>
+        <div class="user-info">
+            <span>Reserva:</span>
+            <p>{{ seats }}</p>
+        </div>
+        <div class="user-info">
+            <span>Precio:</span>
+            <p>{{ price }}</p>
+        </div>
+        <div class="success-tag">Reserva Exitosa</div>
+    </div>
+</body>
+</html>

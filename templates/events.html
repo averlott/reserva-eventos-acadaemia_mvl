@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva Eventos</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+      .content .label{
+          color: #ff7200;
+          font-size: 20px;
+      }
+      .content .cont{
+          color: white;
+          font-size: 20px;
+      }
+
+      .event {
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(14, 13, 13);
+        margin-bottom: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .event div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+      }
+      
+      .label {
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+      
+      input[type="number"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .button-container button {
+        padding: 10px 20px;
+        background-color: #ff7200;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .button-container button:hover {
+        background-color: #ff5400;
+      }
+  </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Reserva Eventos</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">NOSOTROS</a></li>
+                    <li><a href="{{ url_for('events') }}">EVENTOS</a></li>
+                    <li><a href="{{ url_for('contact') }}">CONTACTO</a></li>
+                    <li><a href="{{ url_for('adm') }}">ADMIN</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+              <div class="container">
+                <h1>Eventos</h1>
+
+                {% for record in records %}
+                <div class="event">
+                  <div>
+                    <span class="label">Id:</span>
+                    <span class="cont">{{ record[0] }}</span> 
+                  </div>
+                  <div>
+                    <span class="label">Nombre:</span>
+                    <span class="cont">{{ record[1] }}</span> 
+                  </div>
+                  <div>
+                    <span class="label">Tipo:</span>
+                    <span class="cont">{{ record[2] }}</span> 
+                  </div>
+                  <div>
+                    <span class="label">Precio:</span>
+                    <span class="cont">{{ record[3] }}</span> 
+                  </div>
+                  {% if session['userPK'] %}
+                  <div class="button-container">
+                    <form method="POST" action="/event">
+                      <input type="hidden" name="id" value="{{ record[0] }}">
+                      <input type="hidden" name="name" value="{{ record[1] }}">
+                      <input type="hidden" name="type" value="{{ record[2] }}">
+                      <input type="hidden" name="price" value="{{ record[3] }}">
+                      <button type="submit">Seleccionar</button>
+                    </form>
+                  </div>
+                  {% endif %}
+
+                </div>
+                {% endfor %}
+              </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Eventos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Reserva Eventos</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">NOSOTROS</a></li>
+                    <li><a href="{{ url_for('events') }}">EVENTOS</a></li>
+                    <li><a href="{{ url_for('contact') }}">CONTACTO</a></li>
+                    <li><a href="{{ url_for('adm') }}">ADMIN</a></li>
+                </ul>
+            </div>
+
+           
+        </div> 
+        <div class="content">
+
+                <div class="content">
+                    <h1>Nosotros</h1>
+                    <p class="par">Este website le permitirá realizar la reserva de su lugar en los eventos (conferencias, shows, espectaculos, etc.) habilitados.</p>
+                </div>
+        </div>
+    
+        <footer>
+        </footer>
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
