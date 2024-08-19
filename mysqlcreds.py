@@ -1,5 +1,5 @@
 host="localhost"
-user="root"
-password="River1974"
+user="[ROOT]"
+password="[PASSWORD]"
 database="bookingEvents"
 port=3306
