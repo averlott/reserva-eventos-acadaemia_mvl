@@ -12,3 +12,5 @@ Asegurarse previamente haber cambiado las credenciales de acceso a la base confi
 ### 3. Testear la aplicación utilizando los accesos definidos por default ###
 acceso usuario -> username: user@user | pwd: user  
 acceso Admin -> username: admin | password: admin
+
+### 3. Screenshots ###
