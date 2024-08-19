@@ -14,3 +14,22 @@ acceso usuario -> username: user@user | pwd: user
 acceso Admin -> username: admin | password: admin
 
 ## Screenshots
+
+### Acceso Usuario ###
+
+![usuario1](https://github.com/user-attachments/assets/80437699-cbbd-492a-8ada-9e724b721e09)
+![usuario2](https://github.com/user-attachments/assets/a97fcb74-5412-4797-b3df-37abba5eb543)
+![usuario3](https://github.com/user-attachments/assets/85a5cf18-9ec7-4d35-97ce-350d83d0441f)
+![usuario4](https://github.com/user-attachments/assets/92e02a33-b804-4393-be72-7812bf86f9f3)
+![usuario5](https://github.com/user-attachments/assets/9ff99561-e86b-4194-bd02-14fe52b303ef)
+
+### Acceso Admin ###
+
+![admin1](https://github.com/user-attachments/assets/3740c6fe-6634-41d7-ba73-e977df1294ea)
+![admin2](https://github.com/user-attachments/assets/f51e27a7-9700-42aa-b7eb-4da7eb9c75d8)
+![admin3](https://github.com/user-attachments/assets/e537c381-b105-4a35-8285-4239eeba5db6)
+
+
+
+
+
