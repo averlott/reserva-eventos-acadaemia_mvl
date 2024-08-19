@@ -13,4 +13,4 @@ Asegurarse previamente haber cambiado las credenciales de acceso a la base confi
 acceso usuario -> username: user@user | pwd: user  
 acceso Admin -> username: admin | password: admin
 
-### 3. Screenshots ###
+## Screenshots
