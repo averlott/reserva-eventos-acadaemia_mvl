@@ -10,5 +10,5 @@ Ejecutar el script "db_script_inicial.sql" que se encuentra en el root del repos
 Asegurarse previamente haber cambiado las credenciales de acceso a la base configuradas en el archivo "mysqlcreds.py" que se encuentran en el root del repositorio.
 
 ### 3. Testear la aplicación utilizando los accesos definidos por default ###
-acceso usuario -> username: user@user | pwd: user
-acdeso Admin -> username: admin | password: admin
+acceso usuario -> username: user@user | pwd: user██
+acceso Admin -> username: admin | password: admin
